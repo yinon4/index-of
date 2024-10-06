@@ -4,7 +4,9 @@ layout: default
 
 <h1>{{ page.title }}</h1>
 <ul>
-  {% for item in site.recipes %} {% if item.path contains page.dir %}
+  {% for item in site.recipes %} item.path: {{ item.path }}
+  <br />
+  {% if item.path contains page.dir %}
   <li><a href="{{ item.url }}">{{ item.title }}</a></li>
   {% endif %} {% endfor %}
 </ul>
