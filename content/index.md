@@ -1,4 +1,5 @@
 # Index
 
-- [📄 asdf.md](asdf.md)
 - [📁 recipes](./recipes/index.md)
+- [📄 index.md](index.md)
+- [📄 asdf.md](asdf.md)
