@@ -12,6 +12,9 @@ def generate_index(dir_path):
         index_content += f'- [🔙 Back to {parent_dir}](../index.md)\n\n'
 
     for item in items:
+        if item == 'index.md':
+            continue
+
         full_path = os.path.join(dir_path, item)
         if os.path.isdir(full_path):
             index_content += f'- [📁 {item}](./{item}/index.md)\n'
