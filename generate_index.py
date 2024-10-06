@@ -7,7 +7,6 @@ def generate_index(dir_path):
     index_content = '# Index\n\n'
 
     parent_dir = os.path.basename(os.path.dirname(dir_path))
-    print(parent_dir)
     if parent_dir != '.':
         index_content += f'- [🔙 Back to {parent_dir}](../index.md)\n\n'
 
