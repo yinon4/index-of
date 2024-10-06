@@ -27,7 +27,7 @@ jobs:
 
       - name: Compile Project
         run: |
-          python complie.py
+          python compile.py
 
       - name: Deploy to GitHub Pages
         run: |
