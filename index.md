@@ -2,12 +2,10 @@
 
 <ul>
   {% for doc in doclist %} 
-  doc
   {{doc.url}}
   {{doc.name}}
-  doc.name
   {% if doc.name contains '.md' or doc.name contains
   '.html' %}
-  <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.url }}</a></li>
+  <li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.name }}</a></li>
   {% endif %} {% endfor %}
 </ul>
