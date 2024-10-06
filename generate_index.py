@@ -1,6 +1,6 @@
 import os
 
-base_dir = './content'  # Adjust as necessary
+base_dir = './content'
 
 def generate_index(dir_path):
     items = os.listdir(dir_path)

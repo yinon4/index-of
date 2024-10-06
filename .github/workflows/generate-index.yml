@@ -32,4 +32,4 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git add .
           git commit -m "Generated index files" || echo "No changes to commit"
-          git push
+        git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/yinon4/index-of.git HEAD:main
