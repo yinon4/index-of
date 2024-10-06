@@ -33,6 +33,6 @@ jobs:
         run: |
           git config --local user.name "github-actions"
           git config --local user.email "github-actions@github.com"
-          git add compiled
+          git add --all
           git commit -m "Deploying compiled files" || echo "No changes to commit"
           git push --force https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }} gh-pages
