@@ -17,10 +17,10 @@ def generate_index(dir_path):
         index_file.write(index_content)
 
 def walk_dir(dir_path):
+    generate_index(dir_path)
     for entry in os.listdir(dir_path):
         full_path = os.path.join(dir_path, entry)
         if os.path.isdir(full_path):
-            generate_index(full_path)
             walk_dir(full_path)
 
 if __name__ == '__main__':

@@ -1,7 +1,8 @@
 # Index
 
 - [📁 cakes](./cakes/index.md)
-- [📄 pancakes.md](pancakes.md)
 - [📄 hey.md](hey.md)
+- [📄 index.md](index.md)
 - [📄 mac-cheese.md](mac-cheese.md)
+- [📄 pancakes.md](pancakes.md)
 - [📁 samwiches](./samwiches/index.md)
