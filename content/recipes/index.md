@@ -1,5 +1,7 @@
 # Index
 
+- [🔙 Back to content](../index.md)
+
 - [📁 cakes](./cakes/index.md)
 - [📄 hey.md](hey.md)
 - [📄 index.md](index.md)
