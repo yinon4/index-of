@@ -1,8 +1,3 @@
----
-layout: directory
-title: recipes
----
-
 Welcome to recipes
 
 [cakes](./cakes/)

@@ -1,6 +1,2 @@
----
-layout: directory
-title: sam
----
-
-Welcome to asm
+[broc](./broccoli.md)
+[tuna](./tuna.md)
