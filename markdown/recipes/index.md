@@ -1,9 +1,8 @@
-# Index for recipes
+# Index of recipes
 
 - [🔙 Back](..)
 
 - 📄 [hey](hey)
-- 📄 [index](index)
 - 📄 [mac-cheese](mac-cheese)
 - 📄 [pancakes](pancakes)
 

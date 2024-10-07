@@ -1,8 +1,7 @@
-# Index for samwiches
+# Index of samwiches
 
 - [🔙 Back](..)
 
 - 📄 [broccoli](broccoli)
-- 📄 [index](index)
 - 📄 [tuna](tuna)
 

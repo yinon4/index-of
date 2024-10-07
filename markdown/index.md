@@ -1,6 +1,5 @@
-# Index for markdown
+# Index of markdown
 
 - 📄 [asdf](asdf)
-- 📄 [index](index)
 
 - 📁 [recipes](recipes)

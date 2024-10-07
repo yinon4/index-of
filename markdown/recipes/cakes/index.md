@@ -1,8 +1,7 @@
-# Index for cakes
+# Index of cakes
 
 - [🔙 Back](..)
 
 - 📄 [choco](choco)
-- 📄 [index](index)
 - 📄 [pie](pie)
 

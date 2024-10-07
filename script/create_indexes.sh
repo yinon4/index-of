@@ -7,7 +7,7 @@ generate_index() {
 
     # Start the index file
     {
-        echo "# Index for $(basename "$dir")"
+        echo "# Index of $(basename "$dir")"
         echo ""
         
         # Add a back link if this is not the root directory
@@ -20,8 +20,10 @@ generate_index() {
         # List all Markdown files
         find "$dir" -maxdepth 1 -type f -name '*.md' | while read -r md_file; do
             local md_filename=$(basename "$md_file")
-            # Create link without the .md extension
-            echo "- 📄 [${md_filename%.md}](${md_filename%.md})"
+            if [[ "$md_filename" != "index.md" ]]; then
+                # Create link without the .md extension
+                echo "- 📄 [${md_filename%.md}](${md_filename%.md})"
+            fi
         done
         
         echo ""
