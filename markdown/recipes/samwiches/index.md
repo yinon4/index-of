@@ -1,4 +1,4 @@
-# Index of samwiches
+# Index of /recipes/samwiches
 
 - [🔙 Back](..)
 

@@ -4,10 +4,12 @@
 generate_index() {
     local dir="$1"
     local output_file="$dir/index.md"
+    local relative_path=$(realpath --relative-to="$INPUT_DIR" "$dir")
+
 
     # Start the index file
     {
-        echo "# Index of $(basename "$dir")"
+        echo "# Index of /$relative_path"
         echo ""
         
         # Add a back link if this is not the root directory

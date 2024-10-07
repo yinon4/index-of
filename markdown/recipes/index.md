@@ -1,4 +1,4 @@
-# Index of recipes
+# Index of /recipes
 
 - [🔙 Back](..)
 

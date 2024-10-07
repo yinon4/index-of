@@ -1,4 +1,4 @@
-# Index of cakes
+# Index of /recipes/cakes
 
 - [🔙 Back](..)
 

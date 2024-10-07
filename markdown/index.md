@@ -1,4 +1,4 @@
-# Index of markdown
+# Index of /.
 
 - 📄 [asdf](asdf)
 
