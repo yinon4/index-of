@@ -1,6 +1,6 @@
 # Index for samwiches
 
-[🔙 Back to recipes](./markdown/recipes)
+[🔙 Back to recipes](recipes)
 
 📄 [broccoli](broccoli)
 📄 [index](index)
