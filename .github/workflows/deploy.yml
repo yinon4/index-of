@@ -31,4 +31,4 @@ jobs:
           git add .
           git commit -m "Build $(date '+%Y-%m-%d %H:%M:%S')"
           git show-ref
-          git push origin main
+          git push --force https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }} main
