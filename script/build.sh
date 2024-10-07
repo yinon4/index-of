@@ -37,3 +37,10 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
 done
 
 echo "Conversion completed. HTML files are located in '$OUTPUT_DIR'."
+
+delete_indexes() {
+    find "$1" -name 'index.md' -type f -exec rm -f {} +
+}
+
+delete_indexes "$INPUT_DIR"
+echo "All index.md files deleted."
