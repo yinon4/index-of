@@ -1,8 +1,4 @@
-./script/create_indexes.sh ./markdown
-
-./script/build.sh ./markdown ./docs
-
-TODO:
+### TODO:
 
 - styling
 - refactor
@@ -12,3 +8,9 @@ TODO:
 - assets
   - images
   - +++
+
+```bash
+./script/create_indexes.sh ./markdown
+
+./script/build.sh ./markdown ./docs
+```
