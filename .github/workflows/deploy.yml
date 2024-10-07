@@ -30,4 +30,5 @@ jobs:
         run: |
           git add .
           git commit -m "Build $(date '+%Y-%m-%d %H:%M:%S')"
+          git show-ref
           git push origin gh-pages
