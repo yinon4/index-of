@@ -28,6 +28,6 @@ jobs:
 
       - name: Commit HTML files to gh-pages
         run: |
-          git add out/*.html
+          git add out/**
           git commit -m "Build $(date '+%Y-%m-%d %H:%M:%S')"
           git push origin gh-pages
