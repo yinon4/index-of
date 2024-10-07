@@ -13,7 +13,7 @@ generate_index() {
         # Add a back link if this is not the root directory
         if [ "$dir" != "$INPUT_DIR" ]; then
             local parent_dir="$(dirname "$dir")"
-            echo "[🔙 Back](..)"
+            echo "- [🔙 Back](..)"
             echo ""
         fi
         
@@ -21,7 +21,7 @@ generate_index() {
         find "$dir" -maxdepth 1 -type f -name '*.md' | while read -r md_file; do
             local md_filename=$(basename "$md_file")
             # Create link without the .md extension
-            echo "📄 [${md_filename%.md}](${md_filename%.md})"
+            echo "- 📄 [${md_filename%.md}](${md_filename%.md})"
         done
         
         echo ""
@@ -29,7 +29,7 @@ generate_index() {
         # List all subdirectories and generate their index files
         find "$dir" -maxdepth 1 -type d ! -name '.' | while read -r subdir; do
             if [ "$subdir" != "$dir" ]; then
-                echo "📁 [$(basename "$subdir")]($(basename "$subdir"))"
+                echo "- 📁 [$(basename "$subdir")]($(basename "$subdir"))"
             fi
         done
     } > "$output_file"

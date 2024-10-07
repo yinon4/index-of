@@ -1,11 +1,11 @@
 # Index for recipes
 
-[🔙 Back](..)
+- [🔙 Back](..)
 
-📄 [hey](hey)
-📄 [index](index)
-📄 [mac-cheese](mac-cheese)
-📄 [pancakes](pancakes)
+- 📄 [hey](hey)
+- 📄 [index](index)
+- 📄 [mac-cheese](mac-cheese)
+- 📄 [pancakes](pancakes)
 
-📁 [cakes](cakes)
-📁 [samwiches](samwiches)
+- 📁 [cakes](cakes)
+- 📁 [samwiches](samwiches)
