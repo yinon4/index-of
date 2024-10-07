@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - main
-      - gh-pages
 
 jobs:
   convert:
@@ -27,9 +26,9 @@ jobs:
           git config --local user.email "you@example.com"
           git config --local user.name "Your Name"
 
-      - name: Commit HTML files to gh-pages
+      - name: Commit HTML files to main
         run: |
           git add .
           git commit -m "Build $(date '+%Y-%m-%d %H:%M:%S')"
           git show-ref
-          git push origin gh-pages
+          git push origin main
