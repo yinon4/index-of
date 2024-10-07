@@ -21,7 +21,6 @@ generate_index() {
         find "$dir" -maxdepth 1 -type f -name '*.md' | while read -r md_file; do
             local md_filename=$(basename "$md_file")
             if [[ "$md_filename" != "index.md" ]]; then
-                # Create link without the .md extension
                 echo "- 📄 [${md_filename%.md}](${md_filename%.md})"
             fi
         done
@@ -51,7 +50,6 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-# Input directory
 INPUT_DIR="${1%/}"
 
 # Check if the provided directory exists
