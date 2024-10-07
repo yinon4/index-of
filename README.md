@@ -10,6 +10,8 @@
   - images
   - stylesheet.css?
   - +++
+- other file types?
+  - not just md?
 
 ```bash
 sudo apt install pandoc
