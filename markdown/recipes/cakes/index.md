@@ -1,6 +1,6 @@
 # Index for cakes
 
-[🔙 Back to recipes](recipes)
+[🔙 Back](..)
 
 📄 [choco](choco)
 📄 [index](index)

@@ -1,6 +1,6 @@
 # Index for recipes
 
-[🔙 Back to markdown](markdown)
+[🔙 Back](..)
 
 📄 [hey](hey)
 📄 [index](index)

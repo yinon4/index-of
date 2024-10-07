@@ -13,7 +13,7 @@ generate_index() {
         # Add a back link if this is not the root directory
         if [ "$dir" != "$INPUT_DIR" ]; then
             local parent_dir="$(dirname "$dir")"
-            echo "[🔙 Back to $(basename "$parent_dir")]($(basename "$parent_dir"))"
+            echo "[🔙 Back](..)"
             echo ""
         fi
         

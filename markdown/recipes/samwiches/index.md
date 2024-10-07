@@ -1,6 +1,6 @@
 # Index for samwiches
 
-[🔙 Back to recipes](recipes)
+[🔙 Back](..)
 
 📄 [broccoli](broccoli)
 📄 [index](index)
