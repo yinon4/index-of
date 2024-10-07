@@ -13,7 +13,7 @@ generate_index() {
         # Add a back link if this is not the root directory
         if [ "$dir" != "$INPUT_DIR" ]; then
             local parent_dir="$(dirname "$dir")"
-            echo "[🔙 Back to $(basename "$parent_dir")]($parent_dir/index)"
+            echo "[🔙 Back to $(basename "$parent_dir")]($parent_dir)"
             echo ""
         fi
         
@@ -29,7 +29,7 @@ generate_index() {
         # List all subdirectories and generate their index files
         find "$dir" -maxdepth 1 -type d ! -name '.' | while read -r subdir; do
             if [ "$subdir" != "$dir" ]; then
-                echo "📁 [$(basename "$subdir")]($subdir/index)"
+                echo "📁 [$(basename "$subdir")]($subdir)"
             fi
         done
     } > "$output_file"

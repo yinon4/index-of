@@ -3,4 +3,4 @@
 📄 [asdf](asdf)
 📄 [index](index)
 
-📁 [recipes](./markdown/recipes/index)
+📁 [recipes](./markdown/recipes)
