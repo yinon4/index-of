@@ -1,38 +1,33 @@
-name: Deploy to GitHub Pages
-
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
-  deploy:
+  convert:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.8"
-
-      - name: Install dependencies
+      - name: Install Pandoc
         run: |
-          python -m pip install --upgrade pip
+          sudo apt-get update
+          sudo apt-get install -y pandoc
 
-      - name: Compile Project
+      - name: Run conversion script
         run: |
-          python compile.py
+          chmod +x build.sh
+          ./build.sh
 
-      - name: Deploy to GitHub Pages
+      - name: Configure Git
         run: |
-          git config --local user.name "github-actions"
-          git config --local user.email "github-actions@github.com"
-          git add --all
-          git commit -m "Deploying compiled files" || echo "No changes to commit"
-          git push --force https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }} gh-pages
+          git config --local user.email "you@example.com"
+          git config --local user.name "Your Name"
+
+      - name: Commit HTML files to gh-pages
+        run: |
+          git add out/*.html
+          git commit -m "Build $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin gh-pages
