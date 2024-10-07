@@ -2,7 +2,7 @@
  
 # Set input and output directories
 INPUT_DIR="./content"
-OUTPUT_DIR="./out"
+OUTPUT_DIR="./docs"
  
 # Create output directory if it doesn't exist
 mkdir -p "$OUTPUT_DIR"
