@@ -30,7 +30,7 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
     mkdir -p "$(dirname "$output_file")"
     
     # Convert using pandoc
-    pandoc "$md_file" -o "$output_file" --css "./public/global.css"
+    pandoc "$md_file" -o "$output_file" --css "./public/global.css" -s
     
     # Optional: Print conversion status
     echo "Converted '$md_file' to '$output_file'"
