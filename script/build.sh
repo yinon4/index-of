@@ -39,7 +39,7 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
     done
     
     # Add the CSS file name
-    relative_css_path+="global.css"
+    relative_css_path+="public/global.css"
 
     
     # Convert using pandoc
