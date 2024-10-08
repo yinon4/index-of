@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run build script
-        run: bash ./scripts/build.sh ./markdown ./build --css ./public/global.css
+        run: |
+          ./scripts/create_indexes.sh ./markdown
+          ./scripts/build.sh ./markdown ./build --css ./public/global.css
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
