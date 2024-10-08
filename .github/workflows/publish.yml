@@ -17,7 +17,7 @@ jobs:
         run: bash ./scripts/build.sh ./markdown ./build -css ./public/global.css
 
       - name: List output directory
-        run: ls -la ./path/to/build/output # Verify that output exists
+        run: ls -la ./build # Verify that output exists
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v1
