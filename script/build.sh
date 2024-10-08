@@ -8,6 +8,7 @@ fi
 
 INPUT_DIR="${1%/}"
 OUTPUT_DIR="${2%/}"
+CSS_CONTENT=$(cat "public/global.css")
 
 # Check if the provided directory exists
 if [ ! -d "$INPUT_DIR" ]; then
@@ -30,7 +31,11 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
     mkdir -p "$(dirname "$output_file")"
     
     # Convert using pandoc
-    pandoc "$md_file" -o "$output_file" --css "/index-of/public/global.css" -s
+    pandoc "$md_file" -o "$output_file"
+
+    # Add <style> tag with CSS to the HTML file
+    echo "<style>${CSS_CONTENT}</style>" >> "$output_file"
+
     
     # Optional: Print conversion status
     echo "Converted '$md_file' to '$output_file'"
