@@ -15,7 +15,9 @@ jobs:
 
       - name: Run build script
         run: |
+          chmod +x ./scripts/create_indexes.sh
           ./scripts/create_indexes.sh ./markdown
+          chmod +x ./scripts/build.sh
           ./scripts/build.sh ./markdown ./build --css ./public/global.css
 
       - name: Upload build artifacts
