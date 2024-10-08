@@ -38,10 +38,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: github-pages-artifact
+      # - name: Download build artifacts
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: github-pages-artifact
 
       - name: Deploy to GitHub Pages
         id: deployment
