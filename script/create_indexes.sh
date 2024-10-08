@@ -9,7 +9,7 @@ generate_index() {
 
     # Start the index file
     {
-        echo "# Index of /$relative_path"
+        echo "# index of /$relative_path"
         echo ""
         
         # Add a back link if this is not the root directory

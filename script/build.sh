@@ -28,22 +28,9 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
     
     # Create the output directory if it doesn't exist
     mkdir -p "$(dirname "$output_file")"
-
-        output_dir="$(dirname "$output_file")"
-    relative_css_path=""
-
-    # Count the number of parent directories to go up
-    while [[ "$output_dir" != "$OUTPUT_DIR" && "$output_dir" != "." ]]; do
-        relative_css_path="../$relative_css_path"
-        output_dir="$(dirname "$output_dir")"
-    done
-    
-    # Add the CSS file name
-    relative_css_path+="public/global.css"
-
     
     # Convert using pandoc
-    pandoc "$md_file" -o "$output_file" --css "$relative_css_path" -s
+    pandoc "$md_file" -o "$output_file" --css "index-of/public/global.css" -s
     
     # Optional: Print conversion status
     echo "Converted '$md_file' to '$output_file'"
