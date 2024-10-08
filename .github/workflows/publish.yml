@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: alpine
 
     steps:
       - name: Checkout repository
@@ -16,6 +16,9 @@ jobs:
       - name: Run build script
         run: bash ./scripts/build.sh ./markdown ./build -css ./public/global.css
 
+      - name: List output directory
+        run: ls -la ./path/to/build/output # Verify that output exists
+
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v1
         with:
@@ -23,7 +26,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: alpine
 
     permissions:
       pages: write
