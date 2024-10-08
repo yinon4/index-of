@@ -25,6 +25,9 @@ if [ ! -d "$INPUT_DIR" ]; then
     exit 1
 fi
 
+# Check if the output directory exists and delete it
+rm -rf ${OUTPUT_DIR} 2>/dev/null
+
 # Generate index.md files for all directories
 generate_index "$INPUT_DIR"
 
