@@ -14,7 +14,7 @@
   - not just md?
 
 ```bash
-./script/create_indexes.sh ./markdown
+./scripts/create_indexes.sh ./markdown
 
-./script/build.sh ./markdown ./docs
+./scripts/build.sh ./markdown ./build
 ```
