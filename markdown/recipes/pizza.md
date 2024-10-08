@@ -1,3 +1,5 @@
+# Napolitan Pizza
+
 ## Ingredients
 
 - 1 cup water (240 grams) warmed to around 35° C
@@ -35,6 +37,4 @@
 
 **Oven:** This pizza recipe works best in a pizza oven. I've made it many times in an Ooni Koda 16 pizza oven. You will get the best texture, taste and crispness using the high heat and baking stone of a pizza oven. If you don't have a pizza oven, you can still make good pizza from this recipe. Crank your home oven up to the highest temperature it will go (550 is the temperature I tested it at). Place a pizza stone in the oven and let it pre-heat for at least 30-40 minutes. This long pre-heat is crucial to the texture of the pizza dough. Proceed with the recipe as written and bake the pizza in the regular oven for 5-7 minutes, until the dough is puffed up and baked through.
 
-[Quick and Easy Pizza Oven Pizza Dough](https://amybakesbread.com/wprm_print/quick-and-easy-pizza-oven-pizza-dough)
-
-[google](https://googel.com)
+[Credits](https://amybakesbread.com/wprm_print/quick-and-easy-pizza-oven-pizza-dough)
