@@ -6,7 +6,6 @@
 # Generate index.md files for all directories
 generate_index() {
     local dir="$1"
-    echo "Generating index of $dir"
     local output_file="$dir/index.md"
     local relative_path=$(realpath --relative-to="$INPUT_DIR" "$dir")
 
@@ -40,6 +39,8 @@ generate_index() {
             fi
         done
     } > "$output_file"
+
+    echo "Generated index of $dir"
 
     # Recursively generate index.md for each subdirectory
     find "$dir" -maxdepth 1 -type d ! -name '.' | while read -r subdir; do
