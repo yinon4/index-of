@@ -16,12 +16,10 @@ jobs:
       - name: Run build script
         run: bash ./scripts/build.sh ./markdown ./build -css ./public/global.css
 
-      - name: List output directory
-        run: ls -la ./build # Verify that output exists
-
       - name: Upload build artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
+          name: github-pages-artifact
           path: ./build/
 
   deploy:
@@ -39,6 +37,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages-artifact
 
       - name: Deploy to GitHub Pages
         id: deployment
