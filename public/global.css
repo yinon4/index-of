@@ -1,5 +1,5 @@
 :root {
-  height: auto;
+  /* height: "fit-content"; */
   min-height: 100vh;
 
   --z: #ffffff;
@@ -28,33 +28,29 @@
     --x: #ffffff;
   }
 }
-html,
-main,
-body {
-  height: 100%;
-}
 
 body {
   max-width: 65ch;
   margin: 0rem auto;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   font: 1.25rem -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: var(--iv);
+  color: var(--iii);
   background-color: var(--x);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-a:link {
-  color: var(--vi);
+a {
+  color: var(--iii);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 a:visited {
-  color: var(--vi);
+  color: var(--v);
 }
 a:hover {
-  color: var(--viii);
+  color: var(--vi);
 }
 a[data-footnote-backref] {
   filter: grayscale(1);
