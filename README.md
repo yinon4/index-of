@@ -14,7 +14,5 @@
   - not just md?
 
 ```bash
-./scripts/create_indexes.sh ./markdown
-
 ./scripts/build.sh ./markdown ./build --css ./public/global.css
 ```
