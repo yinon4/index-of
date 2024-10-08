@@ -14,8 +14,6 @@
   - not just md?
 
 ```bash
-sudo apt install pandoc
-
 ./script/create_indexes.sh ./markdown
 
 ./script/build.sh ./markdown ./docs

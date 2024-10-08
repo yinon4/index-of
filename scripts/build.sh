@@ -55,7 +55,7 @@ find "$INPUT_DIR" -type f -name '*.md' | while read -r md_file; do
     # Create the output directory if it doesn't exist
     mkdir -p "$(dirname "$output_file")"
     
-    perl ./Markdown.pl --html4tags "$md_file" > "$output_file"
+    perl ./scripts/Markdown.pl --html4tags "$md_file" > "$output_file"
     
     # Add <style> tag with CSS to the bottom of the HTML file, if CSS_CONTENT is not empty
     if [[ -n "$CSS_CONTENT" ]]; then
