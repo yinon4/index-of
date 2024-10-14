@@ -9,7 +9,7 @@
 - 1.5 tbsp olive oil (20g)
 - 1.5 tsp salt (9g)
 - 4-4.5 cups Type 00 Flour (670g)
-- Cornmeal for dusting
+- Cornmeal or Semolina for dusting
 
 ## Instructions
 
