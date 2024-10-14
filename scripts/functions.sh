@@ -12,13 +12,13 @@ generate_index() {
 
     # Start the index file
     {
-        echo "# index of /$relative_path"
+        echo "# Index of /$relative_path"
         echo ""
         
         # Add a back link if this is not the root directory
         if [ "$dir" != "$INPUT_DIR" ]; then
             local parent_dir="$(dirname "$dir")"
-            echo "- [🔙 Back](..)"
+            echo "- [🔙 **Back**](..)"
             echo ""
         fi
         
@@ -26,7 +26,7 @@ generate_index() {
         find "$dir" -maxdepth 1 -type f -name '*.md' | while read -r md_file; do
             local md_filename=$(basename "$md_file")
             if [[ "$md_filename" != "index.md" ]]; then
-                echo "- 📄 [${md_filename%.md}](${md_filename%.md})"
+                echo "- 📄 [**${md_filename%.md}**](${md_filename%.md})"
             fi
         done
         
@@ -35,7 +35,7 @@ generate_index() {
         # List all subdirectories and generate their index files
         find "$dir" -maxdepth 1 -type d ! -name '.' | while read -r subdir; do
             if [ "$subdir" != "$dir" ]; then
-                echo "- 📁 [$(basename "$subdir")]($(basename "$subdir"))"
+                echo "- 📁 [**$(basename "$subdir")**]($(basename "$subdir"))"
             fi
         done
     } > "$output_file"
@@ -55,7 +55,6 @@ generate_index() {
 md_to_html() {
   INPUT_DIR="${1%/}"
   OUTPUT_DIR="${2%/}"
-  CSS_FILE="$3"
 
   # Create output directory for HTML files
   mkdir -p "$OUTPUT_DIR"
@@ -70,13 +69,14 @@ md_to_html() {
       
       # Create the output directory if it doesn't exist
       mkdir -p "$(dirname "$output_file")"
-      
-      perl ./scripts/Markdown.pl --html4tags "$md_file" > "$output_file"
-      
-      # Add <style> tag with CSS to the bottom of the HTML file, if CSS_CONTENT is not empty
-      if [[ -n "$CSS_FILE" ]]; then
-          echo "<style>$(<"$CSS_FILE")</style>" >> "$output_file"
-      fi
+
+      cat ./public/base.html > "$output_file"
+      perl ./scripts/Markdown.pl --html4tags "$md_file" > "temp.html"
+
+      sed -i -e '/<!-- replace -->/{r temp.html' -e 'd}' "$output_file"
+
+
+      rm temp.html
       
       # Optional: Print conversion status
       echo "Converted '$md_file' to '$output_file'"

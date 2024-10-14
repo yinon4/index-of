@@ -9,6 +9,8 @@
 - titles
 - icon
 
+in git bash run
+
 ```bash
-./scripts/build.sh ./markdown ./build --css ./public/global.css
+./scripts/build.sh ./markdown ./build
 ```
