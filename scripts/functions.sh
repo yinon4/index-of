@@ -70,13 +70,14 @@ md_to_html() {
       # Create the output directory if it doesn't exist
       mkdir -p "$(dirname "$output_file")"
 
-      cat ./public/base.html > "$output_file"
-      perl ./scripts/Markdown.pl --html4tags "$md_file" > "temp.html"
+      html=$(perl ./scripts/Markdown.pl --html4tags "$md_file")
+      base=$(cat ./public/base.html)
+      relPath=$(realpath --relative-to="$output_file" "$OUTPUT_DIR")
+      echo $relPath
+      relBase="${base/relative_path/$relPath}"
+      file="${relBase/md_content/$html}"
 
-      sed -i -e '/<!-- replace -->/{r temp.html' -e 'd}' "$output_file"
-
-
-      rm temp.html
+      echo $file > $output_file
       
       # Optional: Print conversion status
       echo "Converted '$md_file' to '$output_file'"
