@@ -12,5 +12,5 @@
 in git bash run
 
 ```bash
-./scripts/build.sh ./markdown ./build
+./scripts/build.sh ./markdown ./build --public ./public
 ```
