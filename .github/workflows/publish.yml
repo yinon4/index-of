@@ -20,12 +20,12 @@ jobs:
       - name: Run build script
         run: |
           chmod +x ./scripts/build.sh
-          ./scripts/build.sh ./markdown ./build --public ./public/
+          ./scripts/build.sh ./markdown ./build --public ./public
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build/
+          path: ./build
 
       - name: Deploy to GitHub Pages
         id: deployment
