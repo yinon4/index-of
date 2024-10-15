@@ -6,8 +6,6 @@
   - pandoc 3.1
   - nixos
   - alpine
-- titles
-- icon
 
 in git bash run
 

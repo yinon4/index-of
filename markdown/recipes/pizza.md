@@ -2,9 +2,9 @@
 
 ## Ingredients
 
-- 1 cup water (240g), warmed to 35° C
-- ¾ cup milk (160g), warmed to 35° C
-- 1.5 tsp granulated sugar (5g)
+- 1 cup warm water (240g, 35°C)
+- ¾ cup warm milk (160g, 35°C)
+- 1.5 tsp sugar (5g)
 - 1 tbsp instant yeast (9g)
 - 1.5 tbsp olive oil (20g)
 - 1.5 tsp salt (9g)

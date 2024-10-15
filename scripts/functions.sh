@@ -75,6 +75,9 @@ md_to_html() {
       base=$(cat ./public/base.html)
       relPath=$(realpath --relative-to="$(dirname "$output_file")" "$OUTPUT_DIR/")
       relBase="${base//relative_path/$relPath}"
+      filename=$(basename -- "$output_file")
+      filename="${filename%.*}"
+      relBase="${relBase//page_title/$filename}"
       file="${relBase/md_content/$html}"
 
       echo $file > $output_file
