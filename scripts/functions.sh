@@ -18,7 +18,7 @@ generate_index() {
         # Add a back link if this is not the root directory
         if [ "$dir" != "$INPUT_DIR" ]; then
             local parent_dir="$(dirname "$dir")"
-            echo "- [🔙 **Back**](..)"
+            echo "- [⭠ **Back**](..)"
             echo ""
         fi
         
@@ -26,7 +26,7 @@ generate_index() {
         find "$dir" -maxdepth 1 -type f -name '*.md' | while read -r md_file; do
             local md_filename=$(basename "$md_file")
             if [[ "$md_filename" != "index.md" ]]; then
-                echo "- 📄 [**${md_filename%.md}**](${md_filename%.md})"
+                echo "- [**${md_filename%.md}**](${md_filename%.md})"
             fi
         done
         
