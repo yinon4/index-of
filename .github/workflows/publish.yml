@@ -20,7 +20,7 @@ jobs:
       - name: Run build script
         run: |
           chmod +x ./scripts/build.sh
-          ./scripts/build.sh ./markdown ./build --css ./public/global.css
+          ./scripts/build.sh ./markdown ./build --public ./public/
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
