@@ -73,7 +73,6 @@ md_to_html() {
       html=$(perl ./scripts/Markdown.pl --html4tags "$md_file")
       base=$(cat ./public/base.html)
       relPath=$(realpath --relative-to="$output_file" "$OUTPUT_DIR")
-      echo $relPath
       relBase="${base/relative_path/$relPath}"
       file="${relBase/md_content/$html}"
 
