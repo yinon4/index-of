@@ -71,21 +71,7 @@ md_to_html() {
       mkdir -p "$(dirname "$output_file")"
 
     #   # Convert the markdown file to HTML
-    #   html=$(perl ./scripts/Markdown.pl --html4tags "$md_file")
-      # Convert the markdown file to HTML using Pandoc
-
-    #   base=$(cat ./public/base.html)
-    #   relPath=$(realpath --relative-to="$(dirname "$output_file")" "$OUTPUT_DIR/")
-    #   relBase="${base//relative_path/$relPath}"
-    #   filename=$(basename -- "$output_file")
-    #   filename="${filename%.*}"
-
-      html=$(pandoc "$md_file" -f markdown -t html -s)
-
-    #   relBase="${relBase//page_title/$filename}"
-    #   file="${relBase/md_content/$html}"
-
-      echo $html > $output_file
+      pandoc "$md_file" -o "$output_file" -f markdown -t html -s
       
       # Optional: Print conversion status
       echo "Converted '$md_file' to '$output_file'"

@@ -1,7 +1,3 @@
----
-title: "READ ME!!!"
----
-
 # Cookbook Overview
 
 Welcome to our recipe collection!
