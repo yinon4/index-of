@@ -70,8 +70,11 @@ md_to_html() {
       # Create the output directory if it doesn't exist
       mkdir -p "$(dirname "$output_file")"
 
-      # Convert the markdown file to HTML
-      html=$(perl ./scripts/Markdown.pl --html4tags "$md_file")
+    #   # Convert the markdown file to HTML
+    #   html=$(perl ./scripts/Markdown.pl --html4tags "$md_file")
+      # Convert the markdown file to HTML using Pandoc
+      html=$(pandoc "$md_file" -f markdown -t html)
+
       base=$(cat ./public/base.html)
       relPath=$(realpath --relative-to="$(dirname "$output_file")" "$OUTPUT_DIR/")
       relBase="${base//relative_path/$relPath}"
