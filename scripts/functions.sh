@@ -71,7 +71,7 @@ md_to_html() {
       mkdir -p "$(dirname "$output_file")"
 
     #   # Convert the markdown file to HTML
-      pandoc "$md_file" -o "$output_file" -f markdown -t html #--template=./public/base.html
+      pandoc "$md_file" -o "$output_file" -f markdown -t html --template=./public/base.html --metadata title="$(basename "${md_file%.md}")"
       
       # Optional: Print conversion status
       echo "Converted '$md_file' to '$output_file'"
