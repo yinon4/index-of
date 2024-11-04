@@ -80,7 +80,7 @@ md_to_html() {
       filename=$(basename -- "$output_file")
       filename="${filename%.*}"
 
-      html=$(pandoc "$md_file" -f markdown -t html --template=./public/base.html --metadata title="$filename")
+      html=$(pandoc "$md_file" -f markdown -t html --template=./public/base.html)
 
       relBase="${relBase//page_title/$filename}"
       file="${relBase/md_content/$html}"
