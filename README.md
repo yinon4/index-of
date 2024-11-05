@@ -3,7 +3,7 @@
 - add recipes
 - add stories
 
-in git bash run
+in wsl with pandoc 3.5
 
 ```bash
 ./scripts/build.sh ./markdown ./build
