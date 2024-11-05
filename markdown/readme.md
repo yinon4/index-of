@@ -60,11 +60,11 @@ Sure! Here’s a Markdown cheat sheet without using code blocks:
 
 ## Links
 
-[Link Text](https://example.com)
+[Link Text](https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg)
 
 ## Images
 
-![Alt Text](image-url.jpg)
+![Alt Text](https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg)
 
 ## Blockquotes
 
